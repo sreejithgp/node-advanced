@@ -5,7 +5,7 @@ const app = express();
 
 app.use(bodyParser.urlencoded());
 
-app.use('/add_product', (req, res, next) => {
+app.post('/add_product', (req, res, next) => {
   res.send('<form action="/product" method="POST"><input type="text" name="title"><button>Add Product</button></form>');
 });
 
